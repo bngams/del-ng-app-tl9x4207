@@ -1,12 +1,10 @@
 <mat-card class="product-card">
     <mat-card-header>
         <mat-card-title>
-            title
-            <!-- {{ product.name | uppercase }} -->
+            {{ product.name | uppercase }}
         </mat-card-title>
         <mat-card-subtitle>
-            price
-            <!-- {{ product.price | currency:'EUR' }} -->
+            {{ product.price | currency:'EUR' }}
         </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
@@ -15,7 +13,7 @@
         </p>
     </mat-card-content>
     <mat-card-actions>
-        <button>BUY</button>
+        <button mat-raised-button>BUY</button>
         <button mat-button>VIEW</button>
     </mat-card-actions>
 </mat-card>
