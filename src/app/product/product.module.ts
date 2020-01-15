@@ -6,6 +6,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { ProductDashboardComponent } from './components/product-dashboard/product-dashboard.component';
+import { MaterialModule } from '../material.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProductDashboardComponent } from './components/product-dashboard/produc
   ],
   imports: [
     CommonModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+    MaterialModule
   ],
   exports: [
     ProductDashboardComponent
