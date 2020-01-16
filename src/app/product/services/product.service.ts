@@ -17,6 +17,10 @@ export class ProductService {
   // /!\ use HttpClientModule
   constructor(private http: HttpClient) { }
 
+  getProductsObservable(): Observable<Product[]> {
+    return this.http.get<Product[]>(environment.apiBaseUrl + '/products');
+  }
+
   getProductsPromise(): Promise<Product[]> {
     return this.http.get<Product[]>(environment.apiBaseUrl + '/products').toPromise();
   }

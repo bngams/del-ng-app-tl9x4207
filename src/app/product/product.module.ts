@@ -8,6 +8,7 @@ import { ProductFormComponent } from './components/product-form/product-form.com
 import { ProductDashboardComponent } from './components/product-dashboard/product-dashboard.component';
 import { MaterialModule } from '../material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     ProductRoutingModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   exports: [
     ProductDashboardComponent

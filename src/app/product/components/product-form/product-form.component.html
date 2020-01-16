@@ -1,9 +1,11 @@
-<form>
+<!-- if no [formGroup] use [formControl] directly instead of formControlName-->
+<!-- <input type="text" [formControl]="otherField"> -->
+<form [formGroup]="productForm" (ngSubmit)="saveProduct()">
     <mat-form-field>
-        <input matInput placeholder="Name" name="name">
+        <input matInput placeholder="Name" name="name" formControlName="name">
     </mat-form-field>
     <mat-form-field>
-        <input matInput placeholder="Price" name="price">
+        <input matInput placeholder="Price" name="price" formControlName="price">
     </mat-form-field>
-    <button type="button" mat-raised-button color="primary">Add</button>
+    <button type="submit" mat-raised-button color="primary">Add</button>
 </form>

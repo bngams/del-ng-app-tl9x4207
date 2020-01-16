@@ -1,3 +1,9 @@
-<div id="product-list">
+<h1>Liste sync</h1>
+<div class="product-list">
     <app-product-card *ngFor="let p of products" [product]="p"></app-product-card>
+</div>
+<h1>Liste async</h1>
+<div class="product-list">
+    <!-- async pipe => use Observable attribute  -->
+    <app-product-card *ngFor="let p of products$ | async" [product]="p"></app-product-card>
 </div>
