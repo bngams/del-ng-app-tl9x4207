@@ -7,6 +7,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { ProductDashboardComponent } from './components/product-dashboard/product-dashboard.component';
 import { MaterialModule } from '../material.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,10 +19,11 @@ import { MaterialModule } from '../material.module';
   imports: [
     CommonModule,
     ProductRoutingModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   exports: [
     ProductDashboardComponent
-  ]
+  ],
 })
 export class ProductModule { }
