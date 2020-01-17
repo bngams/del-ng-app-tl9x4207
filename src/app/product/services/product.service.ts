@@ -17,6 +17,14 @@ export class ProductService {
   // /!\ use HttpClientModule
   constructor(private http: HttpClient) { }
 
+  postProduct(product: Product) {
+    return this.http.post<Product>(environment.apiBaseUrl + '/products', product);
+  }
+
+  getProduct(id: number): Observable<Product> {
+    return this.http.get<Product>(environment.apiBaseUrl + '/products/' + id);
+  }
+
   getProductsObservable(): Observable<Product[]> {
     return this.http.get<Product[]>(environment.apiBaseUrl + '/products');
   }
@@ -36,6 +44,7 @@ export class ProductService {
       subscriber.next(1);
       subscriber.next(2);
       subscriber.next(3);
+      //  async
       setTimeout(() => {
         subscriber.next(4);
       }, 1000);

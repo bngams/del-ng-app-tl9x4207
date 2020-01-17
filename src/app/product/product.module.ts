@@ -9,13 +9,15 @@ import { ProductDashboardComponent } from './components/product-dashboard/produc
 import { MaterialModule } from '../material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
     ProductCardComponent,
     ProductListComponent,
     ProductFormComponent,
-    ProductDashboardComponent
+    ProductDashboardComponent,
+    ProductDetailsComponent
   ],
   imports: [
     CommonModule,

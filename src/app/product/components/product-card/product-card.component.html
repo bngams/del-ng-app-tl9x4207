@@ -14,6 +14,6 @@
     </mat-card-content>
     <mat-card-actions>
         <button mat-raised-button>BUY</button>
-        <button mat-button>VIEW</button>
+        <button mat-button [routerLink]="['details', product.id]">VIEW</button>
     </mat-card-actions>
 </mat-card>

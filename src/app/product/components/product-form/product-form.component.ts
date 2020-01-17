@@ -42,10 +42,17 @@ export class ProductFormComponent implements OnInit {
   saveProduct() {
     console.log(this.productForm.value);
     const product: Product = this.productForm.value;
-    // trigger an event
-    this.submitProduct.emit(product);
     // TODO: reinit form
     this.productForm.reset();
+    this.productForm.markAsPristine();
+    this.productForm.markAsUntouched();
+    this.productService.postProduct(product).subscribe(
+      p => {
+        console.log('res', p);
+        // trigger an event
+        this.submitProduct.emit(p);
+      }
+    );
   }
 
 }

@@ -7,9 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { SyntaxComponent } from './components/syntax/syntax.component';
 import { MaterialModule } from './material.module';
-import { ProductModule } from './product/product.module';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ProductModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
