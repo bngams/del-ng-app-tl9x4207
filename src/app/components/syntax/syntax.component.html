@@ -26,7 +26,7 @@
 </div>
 <hr>
 <div>
-    <button (click)="displayText()">Display text</button>
+    <button (click)="displayText($event)">Display text</button>
     <!-- attributes directives -->
     <p [hidden]="!txtDisplayed">Mon texte</p>
     <!-- structural directives -->
