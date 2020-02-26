@@ -27,12 +27,12 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     customLaunchers: {
-      HeadlessChrome: {
+      CustomHeadlessChrome: {
         base: 'ChromeHeadless',
         flags: ['--no-sandbox', '--disable-web-security']
       }
     },
-    browsers: ['ChromeHeadless'],
+    browsers: ['CustomHeadlessChrome'],
     singleRun: true,
     restartOnFileChange: true
   });
