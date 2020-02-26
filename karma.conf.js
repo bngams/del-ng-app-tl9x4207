@@ -32,7 +32,7 @@ module.exports = function (config) {
         flags: ['--no-sandbox', '--disable-web-security']
       }
     },
-    browsers: ['CustomHeadlessChrome'],
+    browsers: ['Chrome'],
     singleRun: true,
     restartOnFileChange: true
   });
