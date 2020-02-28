@@ -8,7 +8,7 @@ import {
 import { ProductService } from './product.service';
 import { Product } from '../models/product';
 
-describe('ProductListComponent', () => {
+describe('ProductServiceTest', () => {
     // We declare the variables that we'll use for the Test Controller and for our Service
     let httpTestingController: HttpTestingController;
     let pService: ProductService;

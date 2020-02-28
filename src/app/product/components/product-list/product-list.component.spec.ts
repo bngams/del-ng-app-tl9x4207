@@ -12,7 +12,7 @@ import { Observable, of } from 'rxjs';
 
 describe('ProductListComponent', () => {
     // We declare the variables that we'll use for the Test Controller and for our Service
-    let httpSpy;
+    let serviceSpy;
 
     beforeEach(async(() => {
         // load component with a fake module
@@ -32,7 +32,7 @@ describe('ProductListComponent', () => {
 
         // We inject our service (which imports the HttpClient) and the Test Controller
         // Spy
-        httpSpy = jasmine.createSpyObj('ProductService', ['getProductsObservable']);
+        serviceSpy = jasmine.createSpyObj('ProductService', ['getProductsObservable']);
     }));
 
     it('should create the component', () => {
@@ -45,13 +45,13 @@ describe('ProductListComponent', () => {
     });
 
     it('should load products on init', () => {
-        //create a mock of products
+        // create a mock of products
         const mockProducts: Product[] = [
             new Product(1, 'P1', 100),
             new Product(2, 'P2', 200),
             new Product(3, 'P3', 300),
         ];
-        httpSpy.getProductsObservable.and.returnValue(of(mockProducts));
+        serviceSpy.getProductsObservable.and.returnValue(of(mockProducts));
 
         // instantiate component
         const fixture = TestBed.createComponent(ProductListComponent);
